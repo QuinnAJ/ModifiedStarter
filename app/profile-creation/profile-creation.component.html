@@ -1,0 +1,12 @@
+<ActionBar title="Profile Edit">
+</ActionBar>
+<Button text="Button" [nsRouterLink]="['/home']" pageTransition="slide" clearHistory="true"></Button>
+
+<ListView [items]="ActivityList"  (itemTap)="onItemTap($event)" class="list-group">
+    <ng-template let-item="item">
+        <GridLayout>
+            <Label [text]="item.name" [class]="list-group-item"></Label>
+        </GridLayout>
+    </ng-template>
+
+</ListView>

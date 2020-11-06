@@ -3,6 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { DomainOfActivity } from "./industry-list";
 
 @NgModule({
     bootstrap: [
@@ -17,6 +18,6 @@ import { AppComponent } from "./app.component";
     ],
     schemas: [
         NO_ERRORS_SCHEMA
-    ]
+    ],
 })
 export class AppModule { }

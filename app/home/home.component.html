@@ -13,6 +13,12 @@
 			 class="h2 description-label"></Label>
 			 <Button text="Button" (tap)="cameraSet()" text="Camera"></Button>
 
+			<Button text="Button" [nsRouterLink]="['/profile-edit']" pageTransition="slide" 
+			clearHistory="false" text="Edit Profile">
+		   </Button>
+
+			
+
 		</StackLayout>
 	</ScrollView>
 </GridLayout>
