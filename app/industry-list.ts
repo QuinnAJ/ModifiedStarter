@@ -26,7 +26,7 @@ export class DomainOfActivity{
         {id: 2, name:"Evaluator", sector: "Professional Development" },
         {id: 3, name:"Career Strategist", sector: "Professional Development" },
         {id: 4, name:"Systems consultant", sector: "Professional Development" },
-        {id: 5, name:"Systems Archytect", sector: "Professional Development" },
+        {id: 5, name:"Systems Architect", sector: "Professional Development" },
         {id: 6, name:"Portfolio Manager", sector: "Professional Development" },
         {id: 7, name:"Tutor", sector: "Professional Development" },
         {id: 8, name:"Chess Teacher", sector: "Professional Development" },

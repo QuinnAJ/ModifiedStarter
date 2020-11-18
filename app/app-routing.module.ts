@@ -6,7 +6,8 @@ const routes: Routes = [
     { path: "", redirectTo: "/home", pathMatch: "full" },
     { path: "home", loadChildren: () => import("./home/home.module").then(m => m.HomeModule) },
     { path: "lang", loadChildren: () => import("./lang-select/lang-select.module").then(m => m.LangSelectModule) },
-    { path: "profile-edit", loadChildren: ()=> import("./profile-creation/profile-creation.module").then(m=>m.ProfileCreationModule)}
+    { path: "profile-edit", loadChildren: ()=> import("./profile-creation/profile-creation.module").then(m=>m.ProfileCreationModule)},
+    { path: "Login", loadChildren: ()=> import("./Login/login.module").then(m=>m.LoginModule)},
 ];
 
 @NgModule({

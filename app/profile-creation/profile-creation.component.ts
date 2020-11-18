@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DomainOfActivity, IndustryFormat } from "~/industry-list";
 import {ItemEventData} from "tns-core-modules/ui/list-view";
+import {ScrollView,ScrollEventData} from "tns-core-modules/ui/scroll-view"
 
 
 @Component({
@@ -24,9 +25,17 @@ export class ProfileCreationComponent implements OnInit {
     ngOnInit(): void {
 
         this.ActivityList=this.activities.getSectors();// fetches sectors list within the component
+        
     }
 
     onItemTap(args:ItemEventData){
-        console.log(`Index: ${args.index}; vieew:${args.view}; Item:${this.ActivityList[args.index]}`)
+        console.log(`Index: ${args.index}; view:${args.view}; Item:${JSON.stringify(this.ActivityList[args.index])}`)
+    }
+
+    onScroll(args: ScrollEventData) {
+        const scrollView = args.object as ScrollView;
+
+        console.log("scrollX: " + args.scrollX);
+        console.log("scrollY: " + args.scrollY);
     }
 }

@@ -1,0 +1,50 @@
+<ActionBar title="Login">
+</ActionBar>
+
+
+
+<FlexboxLayout class="page">
+<StackLayout class="form">
+
+	<StackLayout class="logo">
+		<Image src="res://dino"></Image>
+	</StackLayout>
+
+	<!--E-mail-->
+	<StackLayout class="input-field">
+		<Textfield class="input" hint="Email" keyboardType="email" autocorrect="false" autocapitalizationType="none"> </Textfield>
+	</StackLayout>
+	
+	<StackLayout class="input-field">
+		<TextField class="input"  hint="password..."></TextField>
+	</StackLayout>
+
+	<StackLayout *ngIf="!IsLoggingIn" class="input-field">
+		<TextField class="input"  hint="Confirm password..."></TextField>
+	</StackLayout>
+
+
+
+
+	<Button [text]="IsLoggingIn ? 'Log In' : 'Sign Up'" (tap)="submit()"></Button>
+	<Label *ngIf="IsLoggingIn" text="Forgot your password?" (tap)="forgotPassword()"></Label>
+	
+
+
+</StackLayout>
+
+
+<Label (tap)="toggleForm()">
+	<FormattedString>
+		<Span [text]="isLoggingIn ? 'Don’t have an account? ' : 'Back to Login'"></Span>
+		<Span [text]="IsLoggingIn ? ' Sign up': ' '" class="bold"></Span>
+	</FormattedString>
+</Label>
+
+
+</FlexboxLayout>
+
+
+
+
+

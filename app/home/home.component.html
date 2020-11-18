@@ -12,13 +12,14 @@
 			<Label textWrap="true" text="Scan the QR code with your mobile device and watch the changes sync live while you play with the code."
 			 class="h2 description-label"></Label>
 			 <Button text="Button" (tap)="cameraSet()" text="Camera"></Button>
-
 			<Button text="Button" [nsRouterLink]="['/profile-edit']" pageTransition="slide" 
 			clearHistory="false" text="Edit Profile">
 		   </Button>
 
-			
-
+		   <Button text="Button" [nsRouterLink]="['/Login']" pageTransition="slide" 
+		   clearHistory="false" text="Login">
+		  </Button>
+		   
 		</StackLayout>
 	</ScrollView>
 </GridLayout>

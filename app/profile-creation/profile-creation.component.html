@@ -1,12 +1,15 @@
 <ActionBar title="Profile Edit">
 </ActionBar>
-<Button text="Button" [nsRouterLink]="['/home']" pageTransition="slide" clearHistory="true"></Button>
 
-<ListView [items]="ActivityList"  (itemTap)="onItemTap($event)" class="list-group">
-    <ng-template let-item="item">
-        <GridLayout>
-            <Label [text]="item.name" [class]="list-group-item"></Label>
-        </GridLayout>
-    </ng-template>
 
-</ListView>
+<ScrollView orientation="horizontal"  (scroll)="onScroll($event)" >
+        <StackLayout  class="page">
+            <ListView  height="150" [items]="ActivityList"  (itemTap)="onItemTap($event)">
+                <ng-template let-activity="item">
+                    <GridLayout>
+                        <Label [text]="activity.name" [class]="'list-group-item'"></Label>
+                    </GridLayout>
+                </ng-template>
+            </ListView>
+        </StackLayout>
+</ScrollView>
